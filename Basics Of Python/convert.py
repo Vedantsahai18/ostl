@@ -24,7 +24,7 @@ class Temperature:
     def convert(self, out_unit_):
         if self.unit == 'celsius' and out_unit_ == 'fahrenheit':
             return Temperature(self.value * 9 / 5 + 32, out_unit_)
-        if self.unit == 'fahrenheit' and out_unit_ == 'celsius':
+        elif self.unit == 'fahrenheit' and out_unit_ == 'celsius':
             return Temperature((self.value - 32) * 5 / 9, out_unit_)
 
     @classmethod
