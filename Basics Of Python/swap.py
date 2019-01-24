@@ -4,7 +4,7 @@ def swap(p, q):
 
 if __name__ == '__main__':
     print("Enter 2 values : ")
-    a = str(input()).split(" ")
+    a = map(str, input().split(" "))
     if len(a) == 2:
         swap(a[0], a[1])
     else:
