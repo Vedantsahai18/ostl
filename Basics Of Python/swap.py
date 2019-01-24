@@ -8,4 +8,4 @@ if __name__ == '__main__':
     if len(a) == 2:
         swap(a[0], a[1])
     else:
-        print("Error : Argument overload")
+        print("Error : Wrong number of arguments")
