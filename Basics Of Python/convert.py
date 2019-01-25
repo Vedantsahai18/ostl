@@ -39,12 +39,14 @@ if __name__ == '__main__':
     incoming_measurement = None
     outgoing_measurement = None
 
-    if in_unit in Length.units():
+    if in_unit in Length.units() and out_unit in Length.units():
         incoming_measurement = Length(value, in_unit)
         outgoing_measurement = incoming_measurement.convert(out_unit)
-    elif in_unit in Temperature.units():
+    elif in_unit in Temperature.units() and out_unit in Temperature.units():
         incoming_measurement = Temperature(value, in_unit)
         outgoing_measurement = incoming_measurement.convert(out_unit)
+    else:
+        print("Error : Invalid or incompatible conversion")
 
     print(incoming_measurement.value, incoming_measurement.unit, " = ", outgoing_measurement.value,
           outgoing_measurement.unit)
